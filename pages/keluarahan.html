@@ -39,6 +39,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../web/flatable/bower_components/sweetalert/dist/sweetalert.css">
 
+    <style>
+        .image-profile{
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+
 </head>
 
 <body >
@@ -2602,8 +2609,8 @@
                                 <div class="page-wrapper">
                                     <div class="page-header">
                                         <div class="page-header-title">
-                                            <h4>Halaman DPT</h4>
-                                            <span>Halaman DPT (Daftar Pemilih Tetap)</span>
+                                            <h4>Halaman TPS</h4>
+                                            <span>Halaman Untuk Tambah, Edit, Lihat Detail dan Hapus untuk Kelurahan</span>
                                         </div>
                                         <div class="page-header-breadcrumb">
                                             <ul class="breadcrumb-title">
@@ -2612,7 +2619,7 @@
                                                         <i class="icofont icofont-home"></i>
                                                     </a>
                                                 </li>
-                                                <li class="breadcrumb-item"><a href="#!">Daftar Pemilih</a>
+                                                <li class="breadcrumb-item"><a href="#!">Daftar Kelurahan</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -2623,7 +2630,7 @@
                                                 <!-- Individual Column Searching (Select Inputs) start -->
                                                 <div class="card">
                                                     <div class="card-header">
-                                                        <h5>Daftar Pemilih</h5>
+                                                        <h5>Daftar Kelurahan</h5>
                                                         <div class="card-header-right">
                                                             <i class="icofont icofont-rounded-down"></i>
                                                             <i class="icofont icofont-refresh"></i>
@@ -2636,23 +2643,19 @@
                                                             <table id="footer-select" class="table table-striped table-bordered nowrap">
                                                                 <thead>
                                                                     <tr>
-                                                                        <th>NIK</th>
-                                                                        <th>Nama</th>
-                                                                        <th>Provinsi</th>
-                                                                        <th>Kabupaten</th>
+                                                                        <th>No</th>
+                                                                        <th>Keluarahan</th>
                                                                         <th>Kecamatan</th>
-                                                                        <th>Kelurahan</th>
+                                                                        <th>Kabupaten / Kota</th>
                                                                         <th>Aksi</th>
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
                                                                     <tr>
-                                                                        <td>9012901830129183</td>
-                                                                        <td>Tiger Nixon</td>
-                                                                        <td>Sumatera Utara</td>
-                                                                        <td>Padang Lawas</td>
-                                                                        <td>Lubuk Barumun</td>
-                                                                        <td>Huta Nopa</td>
+                                                                        <td>1</td>
+                                                                        <td>ADAM</td>
+                                                                        <td>Pulau-pulau Batu Timur</td>
+                                                                        <td>Nias Selatan</td>
                                                                         <td>
                                                                             <span data-bs-toggle="modal" data-bs-target="#detail" class="mr-2 text-info" style="font-size: 20px; cursor: pointer;"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
                                                                             <span data-bs-toggle="modal" data-bs-target="#edit" class="mr-2 text-success" style="font-size: 20px; cursor: pointer;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
@@ -2660,145 +2663,276 @@
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td>9012901830198349</td>
-                                                                        <td>Garrett Winters</td>
-                                                                        <td>Sumatera Utara</td>
+                                                                        <td>2</td>
+                                                                        <td>ADIAN JIOR</td>
+                                                                        <td>Panyabungan Kota</td>
+                                                                        <td>Madina</td>
+                                                                        <td>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#detail" class="mr-2 text-info" style="font-size: 20px; cursor: pointer;"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#edit" class="mr-2 text-success" style="font-size: 20px; cursor: pointer;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                                            <span id="delete" class="mr-2 text-danger" style="font-size: 20px; cursor: pointer;"><i class="fa fa-trash" aria-hidden="true"></i></span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>3</td>
+                                                                        <td>ADIAN KOTING</td>
+                                                                        <td>Adiankoting</td>
+                                                                        <td>Tapanuli Utara</td>
+                                                                        <td>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#detail" class="mr-2 text-info" style="font-size: 20px; cursor: pointer;"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#edit" class="mr-2 text-success" style="font-size: 20px; cursor: pointer;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                                            <span id="delete" class="mr-2 text-danger" style="font-size: 20px; cursor: pointer;"><i class="fa fa-trash" aria-hidden="true"></i></span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>4</td>
+                                                                        <td>Adian Torop</td>
+                                                                        <td>Aek Natas</td>
+                                                                        <td>Labura</td>
+                                                                        <td>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#detail" class="mr-2 text-info" style="font-size: 20px; cursor: pointer;"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#edit" class="mr-2 text-success" style="font-size: 20px; cursor: pointer;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                                            <span id="delete" class="mr-2 text-danger" style="font-size: 20px; cursor: pointer;"><i class="fa fa-trash" aria-hidden="true"></i></span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>5</td>
+                                                                        <td>Aek Badak Jae</td>
+                                                                        <td>SAYURMATINGGI</td>
+                                                                        <td>Tapanuli Selatan</td>
+                                                                        <td>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#detail" class="mr-2 text-info" style="font-size: 20px; cursor: pointer;"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#edit" class="mr-2 text-success" style="font-size: 20px; cursor: pointer;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                                            <span id="delete" class="mr-2 text-danger" style="font-size: 20px; cursor: pointer;"><i class="fa fa-trash" aria-hidden="true"></i></span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>6</td>
+                                                                        <td>Aek Badak Julu</td>
+                                                                        <td>SAYURMATINGGI</td>
+                                                                        <td>Tapanuli Selatan</td>
+                                                                        <td>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#detail" class="mr-2 text-info" style="font-size: 20px; cursor: pointer;"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#edit" class="mr-2 text-success" style="font-size: 20px; cursor: pointer;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                                            <span id="delete" class="mr-2 text-danger" style="font-size: 20px; cursor: pointer;"><i class="fa fa-trash" aria-hidden="true"></i></span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>7</td>
+                                                                        <td>AEK BANIR</td>
+                                                                        <td>Panyabungan Kota</td>
+                                                                        <td>Madina</td>
+                                                                        <td>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#detail" class="mr-2 text-info" style="font-size: 20px; cursor: pointer;"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#edit" class="mr-2 text-success" style="font-size: 20px; cursor: pointer;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                                            <span id="delete" class="mr-2 text-danger" style="font-size: 20px; cursor: pointer;"><i class="fa fa-trash" aria-hidden="true"></i></span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>8</td>
+                                                                        <td>AEK BARGOT</td>
+                                                                        <td>Sosopan</td>
                                                                         <td>Padang Lawas</td>
-                                                                        <td>Lubuk Barumun</td>
-                                                                        <td>Huta Nopa</td>
                                                                         <td>
-                                                                            <span class="mr-2 text-info" style="font-size: 20px; cursor: pointer;"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
-                                                                            <span class="mr-2 text-success" style="font-size: 20px; cursor: pointer;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-                                                                            <span class="mr-2 text-danger" style="font-size: 20px; cursor: pointer;"><i class="fa fa-trash" aria-hidden="true"></i></span>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#detail" class="mr-2 text-info" style="font-size: 20px; cursor: pointer;"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#edit" class="mr-2 text-success" style="font-size: 20px; cursor: pointer;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                                            <span id="delete" class="mr-2 text-danger" style="font-size: 20px; cursor: pointer;"><i class="fa fa-trash" aria-hidden="true"></i></span>
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td>9012901830198435</td>
-                                                                        <td>Ashton Cox</td>
-                                                                        <td>Sumatera Utara</td>
+                                                                        <td>9</td>
+                                                                        <td>AEK BARGOT</td>
+                                                                        <td>Padang Bolak Julu</td>
+                                                                        <td>Paluta</td>
+                                                                        <td>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#detail" class="mr-2 text-info" style="font-size: 20px; cursor: pointer;"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#edit" class="mr-2 text-success" style="font-size: 20px; cursor: pointer;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                                            <span id="delete" class="mr-2 text-danger" style="font-size: 20px; cursor: pointer;"><i class="fa fa-trash" aria-hidden="true"></i></span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>10</td>
+                                                                        <td>Aek baru jae</td>
+                                                                        <td>Batang Natal</td>
+                                                                        <td>Madina</td>
+                                                                        <td>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#detail" class="mr-2 text-info" style="font-size: 20px; cursor: pointer;"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#edit" class="mr-2 text-success" style="font-size: 20px; cursor: pointer;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                                            <span id="delete" class="mr-2 text-danger" style="font-size: 20px; cursor: pointer;"><i class="fa fa-trash" aria-hidden="true"></i></span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>11</td>
+                                                                        <td>Aek baru julu</td>
+                                                                        <td>Batang Natal</td>
+                                                                        <td>Madina</td>
+                                                                        <td>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#detail" class="mr-2 text-info" style="font-size: 20px; cursor: pointer;"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#edit" class="mr-2 text-success" style="font-size: 20px; cursor: pointer;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                                            <span id="delete" class="mr-2 text-danger" style="font-size: 20px; cursor: pointer;"><i class="fa fa-trash" aria-hidden="true"></i></span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>12</td>
+                                                                        <td>Aek Batang Paya</td>
+                                                                        <td>SIPIROK</td>
+                                                                        <td>Tapanuli Selatan</td>
+                                                                        <td>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#detail" class="mr-2 text-info" style="font-size: 20px; cursor: pointer;"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#edit" class="mr-2 text-success" style="font-size: 20px; cursor: pointer;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                                            <span id="delete" class="mr-2 text-danger" style="font-size: 20px; cursor: pointer;"><i class="fa fa-trash" aria-hidden="true"></i></span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>13</td>
+                                                                        <td>AEK BATU</td>
+                                                                        <td>Torgamba</td>
+                                                                        <td>Labusel</td>
+                                                                        <td>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#detail" class="mr-2 text-info" style="font-size: 20px; cursor: pointer;"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#edit" class="mr-2 text-success" style="font-size: 20px; cursor: pointer;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                                            <span id="delete" class="mr-2 text-danger" style="font-size: 20px; cursor: pointer;"><i class="fa fa-trash" aria-hidden="true"></i></span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>14</td>
+                                                                        <td>AEK BAYUR</td>
+                                                                        <td>Padang Bolak Tenggara</td>
+                                                                        <td>Paluta</td>
+                                                                        <td>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#detail" class="mr-2 text-info" style="font-size: 20px; cursor: pointer;"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#edit" class="mr-2 text-success" style="font-size: 20px; cursor: pointer;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                                            <span id="delete" class="mr-2 text-danger" style="font-size: 20px; cursor: pointer;"><i class="fa fa-trash" aria-hidden="true"></i></span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>15</td>
+                                                                        <td>AEK BAYUR</td>
+                                                                        <td>Padang Sidempuan Batunadua</td>
+                                                                        <td>Padangsidimpuan</td>
+                                                                        <td>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#detail" class="mr-2 text-info" style="font-size: 20px; cursor: pointer;"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#edit" class="mr-2 text-success" style="font-size: 20px; cursor: pointer;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                                            <span id="delete" class="mr-2 text-danger" style="font-size: 20px; cursor: pointer;"><i class="fa fa-trash" aria-hidden="true"></i></span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>16</td>
+                                                                        <td>AEK BOLON JAE</td>
+                                                                        <td>Balige</td>
+                                                                        <td>Tobasa</td>
+                                                                        <td>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#detail" class="mr-2 text-info" style="font-size: 20px; cursor: pointer;"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#edit" class="mr-2 text-success" style="font-size: 20px; cursor: pointer;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                                            <span id="delete" class="mr-2 text-danger" style="font-size: 20px; cursor: pointer;"><i class="fa fa-trash" aria-hidden="true"></i></span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>17</td>
+                                                                        <td>AEK BOLON JULU</td>
+                                                                        <td>Balige</td>
+                                                                        <td>Tobasa</td>
+                                                                        <td>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#detail" class="mr-2 text-info" style="font-size: 20px; cursor: pointer;"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#edit" class="mr-2 text-success" style="font-size: 20px; cursor: pointer;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                                            <span id="delete" class="mr-2 text-danger" style="font-size: 20px; cursor: pointer;"><i class="fa fa-trash" aria-hidden="true"></i></span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>18</td>
+                                                                        <td>AEK BONBAN</td>
+                                                                        <td>Aek Nabara Barumun</td>
+                                                                        <td>Padang Lawas</td>
+                                                                        <td>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#detail" class="mr-2 text-info" style="font-size: 20px; cursor: pointer;"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#edit" class="mr-2 text-success" style="font-size: 20px; cursor: pointer;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                                            <span id="delete" class="mr-2 text-danger" style="font-size: 20px; cursor: pointer;"><i class="fa fa-trash" aria-hidden="true"></i></span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>19</td>
+                                                                        <td>AEK BONTAR</td>
+                                                                        <td>Tukka</td>
                                                                         <td>Tapanuli Tengah</td>
-                                                                        <td>Pandan</td>
-                                                                        <td>Aek Tolang</td>
                                                                         <td>
-                                                                            <span class="mr-2 text-info" style="font-size: 20px; cursor: pointer;"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
-                                                                            <span class="mr-2 text-success" style="font-size: 20px; cursor: pointer;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-                                                                            <span class="mr-2 text-danger" style="font-size: 20px; cursor: pointer;"><i class="fa fa-trash" aria-hidden="true"></i></span>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#detail" class="mr-2 text-info" style="font-size: 20px; cursor: pointer;"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#edit" class="mr-2 text-success" style="font-size: 20px; cursor: pointer;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                                            <span id="delete" class="mr-2 text-danger" style="font-size: 20px; cursor: pointer;"><i class="fa fa-trash" aria-hidden="true"></i></span>
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td>9012901830198234</td>
-                                                                        <td>Cedric Kelly</td>
-                                                                        <td>Sumatera Utara</td>
-                                                                        <td>Tapanuli Utara</td>
-                                                                        <td>Tarutung</td>
-                                                                        <td>Sihujur</td>
+                                                                        <td>20</td>
+                                                                        <td>Aek botung</td>
+                                                                        <td>Muara Sipongi</td>
+                                                                        <td>Madina</td>
                                                                         <td>
-                                                                            <span class="mr-2 text-info" style="font-size: 20px; cursor: pointer;"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
-                                                                            <span class="mr-2 text-success" style="font-size: 20px; cursor: pointer;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-                                                                            <span class="mr-2 text-danger" style="font-size: 20px; cursor: pointer;"><i class="fa fa-trash" aria-hidden="true"></i></span>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#detail" class="mr-2 text-info" style="font-size: 20px; cursor: pointer;"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#edit" class="mr-2 text-success" style="font-size: 20px; cursor: pointer;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                                            <span id="delete" class="mr-2 text-danger" style="font-size: 20px; cursor: pointer;"><i class="fa fa-trash" aria-hidden="true"></i></span>
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td>9012901830198234</td>
-                                                                        <td>Cedric Kelly</td>
-                                                                        <td>Sumatera Utara</td>
-                                                                        <td>Tapanuli Utara</td>
-                                                                        <td>Tarutung</td>
-                                                                        <td>Sihujur</td>
+                                                                        <td>21</td>
+                                                                        <td>AEK BUATON</td>
+                                                                        <td>Aek Nabara Barumun</td>
+                                                                        <td>Padang Lawas</td>
                                                                         <td>
-                                                                            <span class="mr-2 text-info" style="font-size: 20px; cursor: pointer;"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
-                                                                            <span class="mr-2 text-success" style="font-size: 20px; cursor: pointer;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-                                                                            <span class="mr-2 text-danger" style="font-size: 20px; cursor: pointer;"><i class="fa fa-trash" aria-hidden="true"></i></span>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#detail" class="mr-2 text-info" style="font-size: 20px; cursor: pointer;"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#edit" class="mr-2 text-success" style="font-size: 20px; cursor: pointer;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                                            <span id="delete" class="mr-2 text-danger" style="font-size: 20px; cursor: pointer;"><i class="fa fa-trash" aria-hidden="true"></i></span>
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td>9012901830198234</td>
-                                                                        <td>Cedric Kelly</td>
-                                                                        <td>Sumatera Utara</td>
-                                                                        <td>Tapanuli Utara</td>
-                                                                        <td>Tarutung</td>
-                                                                        <td>Sihujur</td>
+                                                                        <td>22</td>
+                                                                        <td>Aek Buru Selatan</td>
+                                                                        <td>Bilah Barat</td>
+                                                                        <td>Labuhan Batu</td>
                                                                         <td>
-                                                                            <span class="mr-2 text-info" style="font-size: 20px; cursor: pointer;"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
-                                                                            <span class="mr-2 text-success" style="font-size: 20px; cursor: pointer;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-                                                                            <span class="mr-2 text-danger" style="font-size: 20px; cursor: pointer;"><i class="fa fa-trash" aria-hidden="true"></i></span>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#detail" class="mr-2 text-info" style="font-size: 20px; cursor: pointer;"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#edit" class="mr-2 text-success" style="font-size: 20px; cursor: pointer;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                                            <span id="delete" class="mr-2 text-danger" style="font-size: 20px; cursor: pointer;"><i class="fa fa-trash" aria-hidden="true"></i></span>
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td>9012901830198234</td>
-                                                                        <td>Cedric Kelly</td>
-                                                                        <td>Sumatera Utara</td>
-                                                                        <td>Tapanuli Utara</td>
-                                                                        <td>Tarutung</td>
-                                                                        <td>Sihujur</td>
+                                                                        <td>23</td>
+                                                                        <td>AEK DAKKA</td>
+                                                                        <td>Barus</td>
+                                                                        <td>Tapanuli Tengah</td>
                                                                         <td>
-                                                                            <span class="mr-2 text-info" style="font-size: 20px; cursor: pointer;"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
-                                                                            <span class="mr-2 text-success" style="font-size: 20px; cursor: pointer;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-                                                                            <span class="mr-2 text-danger" style="font-size: 20px; cursor: pointer;"><i class="fa fa-trash" aria-hidden="true"></i></span>
-                                                                        </td>
-                                                                    </tr>
-
-                                                                    <tr>
-                                                                        <td>9012901830198234</td>
-                                                                        <td>Cedric Kelly</td>
-                                                                        <td>Sumatera Utara</td>
-                                                                        <td>Tapanuli Utara</td>
-                                                                        <td>Tarutung</td>
-                                                                        <td>Sihujur</td>
-                                                                        <td>
-                                                                            <span class="mr-2 text-info" style="font-size: 20px; cursor: pointer;"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
-                                                                            <span class="mr-2 text-success" style="font-size: 20px; cursor: pointer;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-                                                                            <span class="mr-2 text-danger" style="font-size: 20px; cursor: pointer;"><i class="fa fa-trash" aria-hidden="true"></i></span>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#detail" class="mr-2 text-info" style="font-size: 20px; cursor: pointer;"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#edit" class="mr-2 text-success" style="font-size: 20px; cursor: pointer;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                                            <span id="delete" class="mr-2 text-danger" style="font-size: 20px; cursor: pointer;"><i class="fa fa-trash" aria-hidden="true"></i></span>
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td>9012901830198234</td>
-                                                                        <td>Cedric Kelly</td>
-                                                                        <td>Sumatera Utara</td>
-                                                                        <td>Tapanuli Utara</td>
-                                                                        <td>Tarutung</td>
-                                                                        <td>Sihujur</td>
+                                                                        <td>24</td>
+                                                                        <td>AEK GAMBIR</td>
+                                                                        <td>Padang Bolak</td>
+                                                                        <td>Paluta</td>
                                                                         <td>
-                                                                            <span class="mr-2 text-info" style="font-size: 20px; cursor: pointer;"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
-                                                                            <span class="mr-2 text-success" style="font-size: 20px; cursor: pointer;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-                                                                            <span class="mr-2 text-danger" style="font-size: 20px; cursor: pointer;"><i class="fa fa-trash" aria-hidden="true"></i></span>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#detail" class="mr-2 text-info" style="font-size: 20px; cursor: pointer;"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#edit" class="mr-2 text-success" style="font-size: 20px; cursor: pointer;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                                            <span id="delete" class="mr-2 text-danger" style="font-size: 20px; cursor: pointer;"><i class="fa fa-trash" aria-hidden="true"></i></span>
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td>9012901830198234</td>
-                                                                        <td>Cedric Kelly</td>
-                                                                        <td>Sumatera Utara</td>
-                                                                        <td>Tapanuli Utara</td>
-                                                                        <td>Tarutung</td>
-                                                                        <td>Sihujur</td>
+                                                                        <td>25</td>
+                                                                        <td>AEK GAMBIR</td>
+                                                                        <td>Lumut</td>
+                                                                        <td>Tapanuli Tengah</td>
                                                                         <td>
-                                                                            <span class="mr-2 text-info" style="font-size: 20px; cursor: pointer;"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
-                                                                            <span class="mr-2 text-success" style="font-size: 20px; cursor: pointer;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-                                                                            <span class="mr-2 text-danger" style="font-size: 20px; cursor: pointer;"><i class="fa fa-trash" aria-hidden="true"></i></span>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#detail" class="mr-2 text-info" style="font-size: 20px; cursor: pointer;"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
+                                                                            <span data-bs-toggle="modal" data-bs-target="#edit" class="mr-2 text-success" style="font-size: 20px; cursor: pointer;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                                            <span id="delete" class="mr-2 text-danger" style="font-size: 20px; cursor: pointer;"><i class="fa fa-trash" aria-hidden="true"></i></span>
                                                                         </td>
                                                                     </tr>
-                                                                    <tr>
-                                                                        <td>9012901830198323</td>
-                                                                        <td>Airi Satou</td>
-                                                                        <td>Sumatera Utara</td>
-                                                                        <td>Nias Utara</td>
-                                                                        <td>Lotu</td>
-                                                                        <td>Lawira II</td>
-                                                                        <td>
-                                                                            <span class="mr-2 text-info" style="font-size: 20px; cursor: pointer;"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
-                                                                            <span class="mr-2 text-success" style="font-size: 20px; cursor: pointer;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-                                                                            <span class="mr-2 text-danger" style="font-size: 20px; cursor: pointer;"><i class="fa fa-trash" aria-hidden="true"></i></span>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
+                                                                    </tbody>
                                                                 <tfoot>
                                                                     <tr>
-                                                                        <th>NIK</th>
-                                                                        <th>Nama</th>
-                                                                        <th>Provinsi</th>
-                                                                        <th>Kabupaten</th>
+                                                                        <th>No</th>
+                                                                        <th>Keluarahan</th>
                                                                         <th>Kecamatan</th>
-                                                                        <th>Kelurahan</th>
+                                                                        <th>Kabupaten / Kota</th>
                                                                         <th>Aksi</th>
                                                                     </tr>
                                                                 </tfoot>
@@ -2818,7 +2952,7 @@
                                 <div class="modal-dialog modal-dialog-centered modal-lg">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Input Data Pemilih</h5>
+                                            <h5 class="modal-title" id="exampleModalLabel">Input Data Kelurahan</h5>
                                             <i class="fa fa-times-circle" style="font-size: 20px;" data-bs-dismiss="modal" aria-label="Close" aria-hidden="true"></i>
                                         </div>
                                         <form id="number_form" action="" method="post" novalidate>
@@ -2826,121 +2960,70 @@
                                             <div class="modal-body">
                                                 <div class="card">
                                                     <div class="card-header">
-                                                        <h5>Input Data Profile Pemilih</h5>
+                                                        <h5>Input Data Kelurahan</h5>
                                                         <div class="card-header-right">
                                                             <i class="icofont icofont-rounded-down"></i>
                                                         </div>
                                                     </div>
                                                     <div class="card-block">
                                                         <div class="form-group row">
-                                                            <label class="col-sm-3 col-form-label">NIK : </label>
+                                                            <label class="col-sm-3 col-form-label">Nama Kelurahan : </label>
                                                             <div class="col-sm-9">
-                                                                <input type="text" class="form-control" name="numeric" id="numeric" placeholder="Masukkan NIK Pemilih">
-                                                                <span class="messages"></span>
-                                                            </div>
-                                                        </div>
-        
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-3 col-form-label">Nama Pemilih : </label>
-                                                            <div class="col-sm-9">
-                                                                <input type="text" class="form-control" id="usernameP" name="Username" placeholder="Masukkan Nama Pemilih">
+                                                                <input type="text" class="form-control" id="usernameP" name="Username" placeholder="Masukkan Nama Kelurahan">
                                                                 <span class="messages popover-valid"></span>
-                                                            </div>
-                                                        </div>
-        
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-3 col-form-label">Alamat Pemilih</label>
-                                                            <div class="col-sm-9">
-                                                                <textarea class="form-control" id="usernameP" name="Username" placeholder="Masukkan Alamat Pemilih" cols="2" rows="3"></textarea>
-                                                                <span class="messages popover-valid"></span>
-                                                            </div>
-                                                        </div>
-        
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-3 col-form-label">Jenis Kelamin</label>
-                                                            <div class="col-sm-9">
-                                                                <div class="form-check form-check-inline">
-                                                                    <label class="form-check-label">
-                                                                        <input class="form-check-input" type="radio" name="gender" id="gender-1" value="option1"> Laki-laki
-                                                                    </label>
-                                                                </div>
-                                                                <div class="form-check form-check-inline">
-                                                                    <label class="form-check-label">
-                                                                        <input class="form-check-input" type="radio" name="gender" id="gender-2" value="option2"> Perempuan
-                                                                    </label>
-                                                                </div>
-                                                                <span class="messages"></span>
-                                                            </div>
-                                                        </div>
-        
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-3 col-form-label">No. Handphone</label>
-                                                            <div class="col-sm-9">
-                                                                <input type="text" class="form-control" id="usernameP" name="Username" placeholder="Masukkan Nama Pemilih">
-                                                                <span class="messages popover-valid"></span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="card">
-                                                    <div class="card-header">
-                                                        <h5>Input Data Wilayah Administrasi Pemilih</h5>
-                                                        <div class="card-header-right">
-                                                            <i class="icofont icofont-rounded-down"></i>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-block">
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-3 col-form-label">Provinsi : </label>
-                                                            <div class="col-sm-9">
-                                                                <select class="form-control" name="numeric" id="numeric">
-                                                                    <option value="">Sumatera Utara</option>
-                                                                </select>
-                                                                <span class="messages"></span>
                                                             </div>
                                                         </div>
 
                                                         <div class="form-group row">
-                                                            <label class="col-sm-3 col-form-label">Kabupaten / Kota : </label>
+                                                            <label class="col-sm-3 col-form-label">Pilih Kecamatan : </label>
                                                             <div class="col-sm-9">
                                                                 <select class="form-control" name="select" id="numeric">
-                                                                    <option value="">Langkat</option>
-                                                                    <option value="">Samosir</option>
-                                                                    <option value="">Tapanuli Utara</option>
-                                                                    <option value="">Tapanuli Selatan</option>
-                                                                    <option value="">Sibolga</option>
+                                                                    <option value="7">Humbahas</option>
+                                                                    <option value="4">Labuhan Batu</option>
+                                                                    <option value="5">Labura</option>
+                                                                    <option value="6">Labusel</option>
+                                                                    <option value="8">Madina</option>
+                                                                    <option value="9">Nias</option>
+                                                                    <option value="10">Nias Barat</option>
+                                                                    <option value="11">Nias Selatan</option>
+                                                                    <option value="12">Nias Utara</option>
+                                                                    <option value="13">Padang Lawas</option>
+                                                                    <option value="15">Padangsidimpuan</option>
+                                                                    <option value="14">Paluta</option>
+                                                                    <option value="17">Samosir</option>
+                                                                    <option value="19">Sibolga</option>
+                                                                    <option value="21">Tapanuli Selatan</option>
+                                                                    <option value="18">Tapanuli Tengah</option>
+                                                                    <option value="20">Tapanuli Utara</option>
+                                                                    <option value="22">Tobasa</option>
                                                                 </select>
-                                                                <span class="messages"></span>
-                                                            </div>
-                                                        </div>
-
+                                                            </div>  
+                                                        </div>  
+        
                                                         <div class="form-group row">
-                                                            <label class="col-sm-3 col-form-label">Kecamatan : </label>
+                                                            <label class="col-sm-3 col-form-label">Pilih kabupaten : </label>
                                                             <div class="col-sm-9">
-                                                                <select class="form-control" name="numeric" id="numeric">
-                                                                    <option value="">Bakti Raja</option>
-                                                                    <option value="">Dolok Sanggul</option>
-                                                                    <option value="">Pakkat</option>
-                                                                    <option value="">Parlinganan</option>
-                                                                    <option value="">Parlilitan</option>
-                                                                </select>
-                                                                <span class="messages"></span>
-                                                            </div>
-                                                        </div>
 
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-3 col-form-label">Desa / Kelurahan : </label>
-                                                            <div class="col-sm-9">
-                                                                <select class="form-control" name="numeric" id="numeric">
-                                                                    <option value="">Hutajulu</option>
-                                                                    <option value="">Hutapaung</option>
-                                                                    <option value="">Aek Tolang</option>
-                                                                    <option value="">Lobu Tolong</option>
-                                                                    <option value="">Pearung</option>
-                                                                    <option value="">Pearung</option>
-                                                                    <option value="">Pearung Silali</option>
-
+                                                                <select class="form-control" name="select" id="numeric">
+                                                                    <option value="24">Gunungsitoli</option>
+                                                                    <option value="7">Humbahas</option>
+                                                                    <option value="4">Labuhan Batu</option>
+                                                                    <option value="5">Labura</option>
+                                                                    <option value="6">Labusel</option>
+                                                                    <option value="8">Madina</option>
+                                                                    <option value="9">Nias</option>
+                                                                    <option value="10">Nias Barat</option>
+                                                                    <option value="11">Nias Selatan</option>
+                                                                    <option value="12">Nias Utara</option>
+                                                                    <option value="13">Padang Lawas</option>
+                                                                    <option value="15">Padangsidimpuan</option>
+                                                                    <option value="14">Paluta</option>
+                                                                    <option value="17">Samosir</option>
+                                                                    <option value="19">Sibolga</option>
+                                                                    <option value="21">Tapanuli Selatan</option>
+                                                                    <option value="18">Tapanuli Tengah</option>
+                                                                    <option value="20">Tapanuli Utara</option>
+                                                                    <option value="22">Tobasa</option>
                                                                 </select>
                                                                 <span class="messages"></span>
                                                             </div>
@@ -2963,7 +3046,7 @@
                                 <div class="modal-dialog modal-dialog-centered modal-lg">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Detail Data Pemilih</h5>
+                                            <h5 class="modal-title" id="exampleModalLabel">Detail Data Kelurahan</h5>
                                             <i class="fa fa-times-circle" style="font-size: 20px;" data-bs-dismiss="modal" aria-label="Close" aria-hidden="true"></i>
                                         </div>
                                         <form id="number_form" action="http://html.phoenixcoded.net/" method="post" novalidate>
@@ -2971,123 +3054,71 @@
                                             <div class="modal-body">
                                                 <div class="card">
                                                     <div class="card-header">
-                                                        <h5>Detail Data Profil Pemilih</h5>
+                                                        <h5>Detail Data Kelurahan</h5>
                                                         <div class="card-header-right">
                                                             <i class="icofont icofont-rounded-down"></i>
                                                         </div>
                                                     </div>
                                                     <div class="card-block">
                                                         <div class="form-group row">
-                                                            <label class="col-sm-3 col-form-label">NIK : </label>
+                                                            <label class="col-sm-3 col-form-label">Nama Kelurahan : </label>
                                                             <div class="col-sm-9">
-                                                                <input type="text" class="form-control" name="numeric" id="numeric" placeholder="Masukkan NIK Pemilih" value="9012901830129183" readonly>
-                                                                <span class="messages"></span>
-                                                            </div>
-                                                        </div>
-        
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-3 col-form-label">Nama Pemilih : </label>
-                                                            <div class="col-sm-9">
-                                                                <input type="text" class="form-control" id="usernameP" name="Username" placeholder="Masukkan Nama Pemilih" value="Tiger Nixon" readonly>
+                                                                <input type="text" class="form-control" id="usernameP" name="Username" placeholder="Masukkan Nama Kelurahan" value="ADAM" readonly>
                                                                 <span class="messages popover-valid"></span>
                                                             </div>
                                                         </div>
+
+                                                        <div class="form-group row">
+                                                            <label class="col-sm-3 col-form-label">Pilih Kecamatan : </label>
+                                                            <div class="col-sm-9">
+                                                                <select class="form-control" name="select" id="numeric" disabled>
+                                                                    <option value="7">Humbahas</option>
+                                                                    <option value="4">Labuhan Batu</option>
+                                                                    <option value="5">Labura</option>
+                                                                    <option value="6">Labusel</option>
+                                                                    <option value="8">Madina</option>
+                                                                    <option value="9">Nias</option>
+                                                                    <option value="10">Nias Barat</option>
+                                                                    <option value="11">Nias Selatan</option>
+                                                                    <option value="12">Nias Utara</option>
+                                                                    <option value="13">Padang Lawas</option>
+                                                                    <option value="15">Padangsidimpuan</option>
+                                                                    <option value="14">Paluta</option>
+                                                                    <option value="17">Samosir</option>
+                                                                    <option value="19">Sibolga</option>
+                                                                    <option value="21">Tapanuli Selatan</option>
+                                                                    <option value="18">Tapanuli Tengah</option>
+                                                                    <option value="20">Tapanuli Utara</option>
+                                                                    <option value="22">Tobasa</option>
+                                                                    <option value="22" selected>Pulau-pulau Batu Timur</option>
+                                                                </select>
+                                                            </div>  
+                                                        </div>  
         
                                                         <div class="form-group row">
-                                                            <label class="col-sm-3 col-form-label">Alamat Pemilih</label>
+                                                            <label class="col-sm-3 col-form-label">Pilih kabupaten : </label>
                                                             <div class="col-sm-9">
-                                                                <textarea class="form-control" id="usernameP" name="Username" placeholder="Masukkan Alamat Pemilih" cols="2" rows="3" disabled>Sumatera Utara</textarea>
-                                                                <span class="messages popover-valid"></span>
-                                                            </div>
-                                                        </div>
-        
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-3 col-form-label">Jenis Kelamin</label>
-                                                            <div class="col-sm-9">
-                                                                <div class="form-check form-check-inline">
-                                                                    <label class="form-check-label">
-                                                                        <input class="form-check-input" type="radio" name="gender" id="gender-1" value="option1" disabled checked> Laki-laki
-                                                                    </label>
-                                                                </div>
-                                                                <div class="form-check form-check-inline">
-                                                                    <label class="form-check-label">
-                                                                        <input class="form-check-input" type="radio" name="gender" id="gender-2" value="option2" disabled> Perempuan
-                                                                    </label>
-                                                                </div>
-                                                                <span class="messages"></span>
-                                                            </div>
-                                                        </div>
-        
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-3 col-form-label">No. Handphone</label>
-                                                            <div class="col-sm-9">
-                                                                <input type="text" class="form-control" id="usernameP" name="Username" placeholder="Masukkan Nama Pemilih" value="081234567891" readonly>
-                                                                <span class="messages popover-valid"></span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
 
-                                                <div class="card">
-                                                    <div class="card-header">
-                                                        <h5>Detail Data Wilayah Administrasi Pemilih</h5>
-                                                        <div class="card-header-right">
-                                                            <i class="icofont icofont-rounded-down"></i>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-block">
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-3 col-form-label">Provinsi : </label>
-                                                            <div class="col-sm-9">
-                                                                <select class="form-control" name="numeric" id="numeric" disabled>
-                                                                    <option value="">Sumatera Utara</option>
-                                                                </select>
-                                                                <span class="messages"></span>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-3 col-form-label">Kabupaten / Kota : </label>
-                                                            <div class="col-sm-9">
-                                                                <select class="form-control" name="numeric" id="numeric" disabled>
-                                                                    <option value="">Langkat</option>
-                                                                    <option value="">Samosir</option>
-                                                                    <option value="">Tapanuli Utara</option>
-                                                                    <option value="">Tapanuli Selatan</option>
-                                                                    <option value="">Sibolga</option>
-                                                                    <option value="" selected>Padang Lawas</option>
-                                                                </select>
-                                                                <span class="messages"></span>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-3 col-form-label">Kecamatan : </label>
-                                                            <div class="col-sm-9">
-                                                                <select class="form-control" name="numeric" id="numeric" disabled>
-                                                                    <option value="">Bakti Raja</option>
-                                                                    <option value="">Dolok Sanggul</option>
-                                                                    <option value="">Pakkat</option>
-                                                                    <option value="">Parlinganan</option>
-                                                                    <option value="">Parlilitan</option>
-                                                                    <option value="" selected>Lubuk Barumun</option>
-                                                                </select>
-                                                                <span class="messages"></span>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-3 col-form-label">Desa / Kelurahan : </label>
-                                                            <div class="col-sm-9">
-                                                                <select class="form-control" name="numeric" id="numeric" disabled>
-                                                                    <option value="">Hutajulu</option>
-                                                                    <option value="">Hutapaung</option>
-                                                                    <option value="">Aek Tolang</option>
-                                                                    <option value="">Lobu Tolong</option>
-                                                                    <option value="">Pearung</option>
-                                                                    <option value="">Pearung</option>
-                                                                    <option value="">Pearung Silali</option>
-                                                                    <option value="" selected>Huta Nopan</option>
+                                                                <select class="form-control" name="select" id="numeric" disabled>
+                                                                    <option value="24">Gunungsitoli</option>
+                                                                    <option value="7">Humbahas</option>
+                                                                    <option value="4">Labuhan Batu</option>
+                                                                    <option value="5">Labura</option>
+                                                                    <option value="6">Labusel</option>
+                                                                    <option value="8">Madina</option>
+                                                                    <option value="9">Nias</option>
+                                                                    <option value="10">Nias Barat</option>
+                                                                    <option value="11" selected>Nias Selatan</option>
+                                                                    <option value="12">Nias Utara</option>
+                                                                    <option value="13">Padang Lawas</option>
+                                                                    <option value="15">Padangsidimpuan</option>
+                                                                    <option value="14">Paluta</option>
+                                                                    <option value="17">Samosir</option>
+                                                                    <option value="19">Sibolga</option>
+                                                                    <option value="21">Tapanuli Selatan</option>
+                                                                    <option value="18">Tapanuli Tengah</option>
+                                                                    <option value="20">Tapanuli Utara</option>
+                                                                    <option value="22">Tobasa</option>
                                                                 </select>
                                                                 <span class="messages"></span>
                                                             </div>
@@ -3109,7 +3140,7 @@
                                 <div class="modal-dialog modal-dialog-centered modal-lg">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Edit Data Pemilih</h5>
+                                            <h5 class="modal-title" id="exampleModalLabel">Edit Data Kabupaten</h5>
                                             <i class="fa fa-times-circle" style="font-size: 20px;" data-bs-dismiss="modal" aria-label="Close" aria-hidden="true"></i>
                                         </div>
                                         <form id="number_form" action="" method="post" novalidate>
@@ -3117,123 +3148,71 @@
                                             <div class="modal-body">
                                                 <div class="card">
                                                     <div class="card-header">
-                                                        <h5>Edit Data Profil Pemilih</h5>
+                                                        <h5>Detail Data Kelurahan</h5>
                                                         <div class="card-header-right">
                                                             <i class="icofont icofont-rounded-down"></i>
                                                         </div>
                                                     </div>
                                                     <div class="card-block">
                                                         <div class="form-group row">
-                                                            <label class="col-sm-3 col-form-label">NIK : </label>
+                                                            <label class="col-sm-3 col-form-label">Nama Kelurahan : </label>
                                                             <div class="col-sm-9">
-                                                                <input type="text" class="form-control" name="numeric" id="numeric" placeholder="Masukkan NIK Pemilih" value="9012901830129183">
-                                                                <span class="messages"></span>
-                                                            </div>
-                                                        </div>
-        
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-3 col-form-label">Nama Pemilih : </label>
-                                                            <div class="col-sm-9">
-                                                                <input type="text" class="form-control" id="usernameP" name="Username" placeholder="Masukkan Nama Pemilih" value="Tiger Nixon">
+                                                                <input type="text" class="form-control" id="usernameP" name="Username" placeholder="Masukkan Nama Kelurahan" value="ADAM">
                                                                 <span class="messages popover-valid"></span>
                                                             </div>
                                                         </div>
+
+                                                        <div class="form-group row">
+                                                            <label class="col-sm-3 col-form-label">Pilih Kecamatan : </label>
+                                                            <div class="col-sm-9">
+                                                                <select class="form-control" name="select" id="numeric">
+                                                                    <option value="7">Humbahas</option>
+                                                                    <option value="4">Labuhan Batu</option>
+                                                                    <option value="5">Labura</option>
+                                                                    <option value="6">Labusel</option>
+                                                                    <option value="8">Madina</option>
+                                                                    <option value="9">Nias</option>
+                                                                    <option value="10">Nias Barat</option>
+                                                                    <option value="11">Nias Selatan</option>
+                                                                    <option value="12">Nias Utara</option>
+                                                                    <option value="13">Padang Lawas</option>
+                                                                    <option value="15">Padangsidimpuan</option>
+                                                                    <option value="14">Paluta</option>
+                                                                    <option value="17">Samosir</option>
+                                                                    <option value="19">Sibolga</option>
+                                                                    <option value="21">Tapanuli Selatan</option>
+                                                                    <option value="18">Tapanuli Tengah</option>
+                                                                    <option value="20">Tapanuli Utara</option>
+                                                                    <option value="22">Tobasa</option>
+                                                                    <option value="22" selected>Pulau-pulau Batu Timur</option>
+                                                                </select>
+                                                            </div>  
+                                                        </div>  
         
                                                         <div class="form-group row">
-                                                            <label class="col-sm-3 col-form-label">Alamat Pemilih</label>
+                                                            <label class="col-sm-3 col-form-label">Pilih kabupaten : </label>
                                                             <div class="col-sm-9">
-                                                                <textarea class="form-control" id="usernameP" name="Username" placeholder="Masukkan Alamat Pemilih" cols="2" rows="3">Sumatera Utara</textarea>
-                                                                <span class="messages popover-valid"></span>
-                                                            </div>
-                                                        </div>
-        
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-3 col-form-label">Jenis Kelamin</label>
-                                                            <div class="col-sm-9">
-                                                                <div class="form-check form-check-inline">
-                                                                    <label class="form-check-label">
-                                                                        <input class="form-check-input" type="radio" name="gender" id="gender-1" value="option1" checked> Laki-laki
-                                                                    </label>
-                                                                </div>
-                                                                <div class="form-check form-check-inline">
-                                                                    <label class="form-check-label">
-                                                                        <input class="form-check-input" type="radio" name="gender" id="gender-2" value="option2"> Perempuan
-                                                                    </label>
-                                                                </div>
-                                                                <span class="messages"></span>
-                                                            </div>
-                                                        </div>
-        
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-3 col-form-label">No. Handphone</label>
-                                                            <div class="col-sm-9">
-                                                                <input type="text" class="form-control" id="usernameP" name="Username" placeholder="Masukkan Nama Pemilih" value="081234567891">
-                                                                <span class="messages popover-valid"></span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
 
-                                                <div class="card">
-                                                    <div class="card-header">
-                                                        <h5>Edit Data Wilayah Administrasi Pemilih</h5>
-                                                        <div class="card-header-right">
-                                                            <i class="icofont icofont-rounded-down"></i>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-block">
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-3 col-form-label">Provinsi : </label>
-                                                            <div class="col-sm-9">
-                                                                <select class="form-control" name="numeric" id="numeric">
-                                                                    <option value="">Sumatera Utara</option>
-                                                                </select>
-                                                                <span class="messages"></span>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-3 col-form-label">Kabupaten / Kota : </label>
-                                                            <div class="col-sm-9">
-                                                                <select class="form-control" name="numeric" id="numeric">
-                                                                    <option value="">Langkat</option>
-                                                                    <option value="">Samosir</option>
-                                                                    <option value="">Tapanuli Utara</option>
-                                                                    <option value="">Tapanuli Selatan</option>
-                                                                    <option value="">Sibolga</option>
-                                                                    <option value="" selected>Padang Lawas</option>
-                                                                </select>
-                                                                <span class="messages"></span>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-3 col-form-label">Kecamatan : </label>
-                                                            <div class="col-sm-9">
-                                                                <select class="form-control" name="numeric" id="numeric">
-                                                                    <option value="">Bakti Raja</option>
-                                                                    <option value="">Dolok Sanggul</option>
-                                                                    <option value="">Pakkat</option>
-                                                                    <option value="">Parlinganan</option>
-                                                                    <option value="">Parlilitan</option>
-                                                                    <option value="" selected>Lubuk Barumun</option>
-                                                                </select>
-                                                                <span class="messages"></span>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-3 col-form-label">Desa / Kelurahan : </label>
-                                                            <div class="col-sm-9">
-                                                                <select class="form-control" name="numeric" id="numeric">
-                                                                    <option value="">Hutajulu</option>
-                                                                    <option value="">Hutapaung</option>
-                                                                    <option value="">Aek Tolang</option>
-                                                                    <option value="">Lobu Tolong</option>
-                                                                    <option value="">Pearung</option>
-                                                                    <option value="">Pearung</option>
-                                                                    <option value="">Pearung Silali</option>
-                                                                    <option value="" selected>Huta Nopan</option>
+                                                                <select class="form-control" name="select" id="numeric">
+                                                                    <option value="24">Gunungsitoli</option>
+                                                                    <option value="7">Humbahas</option>
+                                                                    <option value="4">Labuhan Batu</option>
+                                                                    <option value="5">Labura</option>
+                                                                    <option value="6">Labusel</option>
+                                                                    <option value="8">Madina</option>
+                                                                    <option value="9">Nias</option>
+                                                                    <option value="10">Nias Barat</option>
+                                                                    <option value="11" selected>Nias Selatan</option>
+                                                                    <option value="12">Nias Utara</option>
+                                                                    <option value="13">Padang Lawas</option>
+                                                                    <option value="15">Padangsidimpuan</option>
+                                                                    <option value="14">Paluta</option>
+                                                                    <option value="17">Samosir</option>
+                                                                    <option value="19">Sibolga</option>
+                                                                    <option value="21">Tapanuli Selatan</option>
+                                                                    <option value="18">Tapanuli Tengah</option>
+                                                                    <option value="20">Tapanuli Utara</option>
+                                                                    <option value="22">Tobasa</option>
                                                                 </select>
                                                                 <span class="messages"></span>
                                                             </div>
