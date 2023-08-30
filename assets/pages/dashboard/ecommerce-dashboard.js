@@ -37,18 +37,19 @@ $(document).ready(function() {
 
     function drawChartDonut() {
         var dataDonut = google.visualization.arrayToDataTable([
-            ['Task', 'Hours per Day'],
-            ['Work', 11],
-            ['Eat', 2],
-            ['Commute', 2],
-            ['Watch TV', 2],
-            ['Sleep', 7]
+            ['Suara Calon', 'Hours per Day'],
+            ['Suara Calon', 250],
+            ['Suara Partai', 200],
+            ['Suara Sah', 300],
+            ['Suara Tidak Sah', 20],
+            ['Total Suara', 320]
         ]);
 
         var optionsDonut = {
-            title: 'My Daily Activities',
-            pieHole: 0.4,
-            colors: ['#2ecc71', '#01C0C8', '#FB9678', '#5faee3', '#f4d03f']
+            title: 'Grafik Real Count',
+            pieHole: 0.2,
+            colors: ['#2ecc71', '#01C0C8', '#FB9678', '#5faee3', '#f4d03f'],
+            pieSliceText: 'none',
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('chart_Donut'));
