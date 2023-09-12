@@ -205,7 +205,7 @@
                             </div>
                             <div class="pcoded-navigatio-lavel" data-i18n="nav.category.navigation" menu-title-theme="theme5">Core</div>
                             <ul class="pcoded-item pcoded-left-item">
-                                <li class="active pcoded-trigger">
+                                <li class="pcoded-trigger">
                                     <a href="../index.html">
                                         <span class="pcoded-micon"><i class="ti-home"></i></span>
                                         <span class="pcoded-mtext" data-i18n="nav.dash.main">Dashboard</span>
@@ -258,7 +258,7 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="pcoded-hasmenu">
+                                <li class="active pcoded-hasmenu">
                                     <a href="javascript:void(0)">
                                         <span class="pcoded-micon"><i class="icofont icofont-database"></i></span>
                                         <span class="pcoded-mtext" data-i18n="nav.dash.main">Kelolah Data</span>
@@ -276,7 +276,7 @@
                                             <a href="kecamatan.html" data-i18n="nav.page_layout.horizontal.main">
                                                 <span class="pcoded-micon"><i class="icon-pie-chart"></i></span>
                                                 <span class="pcoded-mtext">Kecamatan</span>
-                                                <span class="pcoded-mcaret"></span>
+                                                <span class="pcoded-mca ret"></span>
                                             </a>
                                         </li>
                                         <li class="">
@@ -293,13 +293,13 @@
                                                 <span class="pcoded-mcaret"></span>
                                             </a>
                                         </li>
-                                        <li class="">
+                                        <!-- <li class="">
                                             <a href="kabupaten.html" data-i18n="nav.page_layout.horizontal.main">
                                                 <span class="pcoded-micon"><i class="icon-pie-chart"></i></span>
                                                 <span class="pcoded-mtext">Pengguna</span>
                                                 <span class="pcoded-mcaret"></span>
                                             </a>
-                                        </li>
+                                        </li> -->
                                     </ul>
                                 </li>
                                 <li class="pcoded-hasmenu">
@@ -2802,7 +2802,7 @@
         initComplete: function() {
             this.api().columns([2]).every(function() {
                 var column = this;
-                var select = $('<select class="form-control form-control-sm"><option value=""></option></select>')
+                var select = $('<select class="form-control form-control-sm"><option value="">All</option></select>')
                     .appendTo($(column.footer()).empty())
                     .on('change', function() {
                         var val = $.fn.dataTable.util.escapeRegex(

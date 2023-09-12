@@ -210,7 +210,7 @@
                             </div>
                             <div class="pcoded-navigatio-lavel" data-i18n="nav.category.navigation" menu-title-theme="theme5">Core</div>
                             <ul class="pcoded-item pcoded-left-item">
-                                <li class="active pcoded-trigger">
+                                <li class="pcoded-trigger">
                                     <a href="../index.html">
                                         <span class="pcoded-micon"><i class="ti-home"></i></span>
                                         <span class="pcoded-mtext" data-i18n="nav.dash.main">Dashboard</span>
@@ -240,7 +240,7 @@
                                         <span class="pcoded-mcaret"></span>
                                     </a>
                                 </li>
-                                <li class="pcoded-hasmenu">
+                                <li class="active pcoded-hasmenu">
                                     <a href="javascript:void(0)">
                                         <span class="pcoded-micon"><i class="ti-pencil-alt"></i></span>
                                         <span class="pcoded-mtext" data-i18n="nav.dash.main">Survey</span>
@@ -298,13 +298,13 @@
                                                 <span class="pcoded-mcaret"></span>
                                             </a>
                                         </li>
-                                        <li class="">
+                                        <!-- <li class="">
                                             <a href="kabupaten.html" data-i18n="nav.page_layout.horizontal.main">
                                                 <span class="pcoded-micon"><i class="icon-pie-chart"></i></span>
                                                 <span class="pcoded-mtext">Pengguna</span>
                                                 <span class="pcoded-mcaret"></span>
                                             </a>
-                                        </li>
+                                        </li> -->
                                     </ul>
                                 </li>
                                 <li class="pcoded-hasmenu">
@@ -2535,17 +2535,20 @@
                                                     <div class="card-block">
                                                         <div class="form-group row">
                                                             <label class="col-sm-3 col-form-label">Provinsi : </label>
-                                                            <div class="col-sm-9">
+                                                            <div class="col-sm-5">
                                                                 <select class="form-control" name="numeric" id="numeric" disabled>
                                                                     <option value="">Sumatera Utara</option>
                                                                 </select>
                                                                 <span class="messages"></span>
                                                             </div>
+                                                            <div class="col-sm-4">
+                                                                <label class="col-form-label">Super Admin</label>
+                                                            </div>
                                                         </div>
 
                                                         <div class="form-group row">
                                                             <label class="col-sm-3 col-form-label">Kabupaten / Kota : </label>
-                                                            <div class="col-sm-9">
+                                                            <div class="col-sm-5">
                                                                 <select class="form-control" name="select" id="numeric" disabled>
                                                                     <option value="">Langkat</option>
                                                                     <option value="">Samosir</option>
@@ -2555,11 +2558,14 @@
                                                                 </select>
                                                                 <span class="messages"></span>
                                                             </div>
+                                                            <div class="col-sm-4">
+                                                                <label class="col-form-label">Alex Sidabutar</label>
+                                                            </div>
                                                         </div>
 
                                                         <div class="form-group row">
                                                             <label class="col-sm-3 col-form-label">Kecamatan : </label>
-                                                            <div class="col-sm-9">
+                                                            <div class="col-sm-5">
                                                                 <select class="form-control" name="numeric" id="numeric" disabled>
                                                                     <option value="">Bakti Raja</option>
                                                                     <option value="">Dolok Sanggul</option>
@@ -2569,11 +2575,14 @@
                                                                 </select>
                                                                 <span class="messages"></span>
                                                             </div>
+                                                            <div class="col-sm-4">
+                                                                <label class="col-form-label">Amin Surbakti</label>
+                                                            </div>
                                                         </div>
 
                                                         <div class="form-group row">
                                                             <label class="col-sm-3 col-form-label">Desa / Kelurahan : </label>
-                                                            <div class="col-sm-9">
+                                                            <div class="col-sm-5">
                                                                 <select class="form-control" name="numeric" id="numeric" disabled>
                                                                     <option value="">Hutajulu</option>
                                                                     <option value="">Hutapaung</option>
@@ -2585,6 +2594,19 @@
 
                                                                 </select>
                                                                 <span class="messages"></span>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <label class="col-form-label">Jamal Jamrun</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                            <label class="col-sm-3 col-form-label">No. TPS : </label>
+                                                            <div class="col-sm-5">
+                                                                <input type="text" class="form-control" name="numeric" id="numeric" placeholder="Masukkan NIK Pemilih" value="01" readonly>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <label class="col-form-label">Ani Oh Ani</label>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -2703,7 +2725,7 @@
                                                                 <p>Hal-Hal Apa Saja Yang Perlu Diperhatikan Oleh Caleg A Apabila Nanti Terpilih Menjpi
                                                                     DPR RI Dalam Hal Meningkatkan Kesejahteraan Masyarakat Di Desa/Dusun Bapak/Ibu ?</h4>
                                                                 <div class="form-radio">
-                                                                    <textarea class="form-control" id="usernameP" name="Username" col="10" row="10">Memperbaiki tempat ibadah kami, menambah fasilitas tempat belajar</textarea>   
+                                                                    <textarea class="form-control" id="usernameP" name="Username" col="10" row="10" disabled>Memperbaiki tempat ibadah kami, menambah fasilitas tempat belajar</textarea>   
                                                                     <span class="messages popover-valid"></span>
                                                                 </div>
                                                             </div>
@@ -2722,6 +2744,11 @@
                                                             <div class="col-sm-9">
                                                                 <img src="../own_icon/rumah.jpg" class="image-bukti">
                                                             </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                            <button class="btn btn-info">Approve</button>
+                                                            <button class="btn btn-warning">Koreksi</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2879,7 +2906,7 @@
         initComplete: function() {
             this.api().columns([7, 8, 9]).every(function() {
                 var column = this;
-                var select = $('<select class="form-control form-control-sm"><option value=""></option></select>')
+                var select = $('<select class="form-control form-control-sm"><option value="">All</option></select>')
                     .appendTo($(column.footer()).empty())
                     .on('change', function() {
                         var val = $.fn.dataTable.util.escapeRegex(
