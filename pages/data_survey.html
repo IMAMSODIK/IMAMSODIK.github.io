@@ -257,7 +257,7 @@
                                         <li class="">
                                             <a href="data_survey.html" data-i18n="nav.page_layout.horizontal.main">
                                                 <span class="pcoded-micon"><i class="icon-pie-chart"></i></span>
-                                                <span class="pcoded-mtext">Data Survey</span>
+                                                <span class="pcoded-mtext">Hasil Survey</span>
                                                 <span class="pcoded-mcaret"></span>
                                             </a>
                                         </li>
@@ -2293,6 +2293,7 @@
                                                                         <th>Kabupaten</th>
                                                                         <th>Kecamatan</th>
                                                                         <th>Kelurahan</th>
+                                                                        <th>TPS</th>
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
@@ -2307,6 +2308,7 @@
                                                                         <td>Nias Utara</td>
                                                                         <td>Lotu</td>
                                                                         <td>Lawira II</td>
+                                                                        <td>01</td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>1</td>
@@ -2319,6 +2321,7 @@
                                                                         <td>Nias Utara</td>
                                                                         <td>Lotu</td>
                                                                         <td>Lawira II</td>
+                                                                        <td>01</td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>1</td>
@@ -2331,6 +2334,7 @@
                                                                         <td>Nias Utara</td>
                                                                         <td>Lotu</td>
                                                                         <td>Lawira II</td>
+                                                                        <td>01</td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>1</td>
@@ -2343,6 +2347,7 @@
                                                                         <td>Nias Utara</td>
                                                                         <td>Lotu</td>
                                                                         <td>Lawira II</td>
+                                                                        <td>01</td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>1</td>
@@ -2355,6 +2360,7 @@
                                                                         <td>Nias Utara</td>
                                                                         <td>Lotu</td>
                                                                         <td>Lawira II</td>
+                                                                        <td>01</td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>1</td>
@@ -2367,6 +2373,7 @@
                                                                         <td>Nias Utara</td>
                                                                         <td>Lotu</td>
                                                                         <td>Lawira II</td>
+                                                                        <td>01</td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>1</td>
@@ -2379,6 +2386,7 @@
                                                                         <td>Nias Utara</td>
                                                                         <td>Lotu</td>
                                                                         <td>Lawira II</td>
+                                                                        <td>01</td>
                                                                     </tr>
 
                                                                     <tr>
@@ -2392,6 +2400,7 @@
                                                                         <td>Nias Utara</td>
                                                                         <td>Lotu</td>
                                                                         <td>Lawira II</td>
+                                                                        <td>01</td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>1</td>
@@ -2404,6 +2413,7 @@
                                                                         <td>Nias Utara</td>
                                                                         <td>Lotu</td>
                                                                         <td>Lawira II</td>
+                                                                        <td>01</td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>1</td>
@@ -2416,6 +2426,7 @@
                                                                         <td>Nias Utara</td>
                                                                         <td>Lotu</td>
                                                                         <td>Lawira II</td>
+                                                                        <td>01</td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>1</td>
@@ -2428,6 +2439,7 @@
                                                                         <td>Nias Utara</td>
                                                                         <td>Lotu</td>
                                                                         <td>Lawira II</td>
+                                                                        <td>01</td>
                                                                     </tr>
                                                                 </tbody>
                                                                 <tfoot>
@@ -2442,6 +2454,7 @@
                                                                         <th>Kabupaten</th>
                                                                         <th>Kecamatan</th>
                                                                         <th>Kelurahan</th>
+                                                                        <th>TPS</th>
                                                                     </tr>
                                                                 </tfoot>
                                                             </table>
@@ -2746,9 +2759,13 @@
                                                             </div>
                                                         </div>
 
-                                                        <div class="form-group row">
-                                                            <button class="btn btn-info">Approve</button>
-                                                            <button class="btn btn-warning">Koreksi</button>
+                                                        <div class="row justify-content-end mr-2">
+                                                            <div class="col-auto">
+                                                                <div class="form-group row">
+                                                                    <button type="button" class="btn btn-info m-1" id="approve">Approve</button>
+                                                                    <button type="button" class="btn btn-warning m-1" id="koreksi">Koreksi</button>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2900,6 +2917,41 @@
                 )
             }
         })
+    })
+
+    $('#approve').on('click', function(){
+        $("#detail").modal('hide');
+        Swal.fire({
+            icon: 'success',
+            title: 'Success',
+            text: 'Berhasil Approve Data!',
+        })
+    })
+
+    $('#koreksi').on('click', function(){
+        $("#detail").modal('hide');
+        Swal.fire({
+            title: 'Catatan Koreksi',
+            html: `<div class="form-group">
+                        <textarea class="form-control" id="login" rows="3"></textarea>
+                    </div>`,
+            confirmButtonText: 'Submit',
+            focusConfirm: false,
+            preConfirm: () => {
+                const login = Swal.getPopup().querySelector('#login').value
+                if (!login) {
+                    Swal.showValidationMessage(`Input Tidak Bisa Kosong`)
+                }
+                return { login: login }
+            }
+            }).then((result) => {
+            Swal.fire({
+                icon: 'success',
+                title: 'Success',
+                text: 'Berhasil Koreksi Data!'
+            })
+        })
+
     })
 
     $('#footer-select').DataTable({

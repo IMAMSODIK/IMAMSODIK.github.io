@@ -252,7 +252,7 @@
                                         <li class="">
                                             <a href="data_survey.html" data-i18n="nav.page_layout.horizontal.main">
                                                 <span class="pcoded-micon"><i class="icon-pie-chart"></i></span>
-                                                <span class="pcoded-mtext">Data Survey</span>
+                                                <span class="pcoded-mtext">Hasil Survey</span>
                                                 <span class="pcoded-mcaret"></span>
                                             </a>
                                         </li>
@@ -2615,7 +2615,9 @@
                                                                     <tr>
                                                                         <td>1</td>
                                                                         <td>
-                                                                            <img src="../own_icon/rc.jpg" class="image-profile" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#detail-gambar">	
+                                                                            <div id="klik-detail-gambar">
+                                                                                <img src="../own_icon/rc.jpg" class="image-profile" style="cursor: pointer;">	
+                                                                            </div>
                                                                         </td>
                                                                         <td><p><small><strong>20-04-2019, 08:22:25</strong></small></p></td>
                                                                     </tr>
@@ -2637,6 +2639,17 @@
                                             </div>
 
                                         </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="modal fade" id="detail-gambar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Detail Data Laporan Real Count</h5>
+                                            <i class="fa fa-times-circle" style="font-size: 20px;" data-bs-dismiss="modal" aria-label="Close" aria-hidden="true"></i>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -2959,6 +2972,10 @@
                 )
             }
         })
+    })
+
+    $("#klik-detail-gambar").on("click", function(){
+        $('#detail-gambar').modal('show');
     })
 
     $('#footer-select').DataTable({
